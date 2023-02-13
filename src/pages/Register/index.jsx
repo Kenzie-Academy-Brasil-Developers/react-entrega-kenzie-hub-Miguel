@@ -61,7 +61,7 @@ export const Register = () => {
   };
 
   return (
-    <div>
+    <>
       <DivLogo>
         <img src={Logo} />
         <ButtonReturn />
@@ -165,6 +165,6 @@ export const Register = () => {
           <ButtonRegisterInput />
         </div>
       </FormRegister>
-    </div>
+    </>
   );
 };

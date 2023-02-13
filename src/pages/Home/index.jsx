@@ -1,9 +1,12 @@
 import React from "react";
+import { Dash } from "../../components/Dash";
+import { Header } from "../../components/Header";
 
 export const Home = () => {
   return (
     <div>
-      <h1>TESTANDO! HOME</h1>
+      <Header />
+      <Dash />
     </div>
   );
 };
