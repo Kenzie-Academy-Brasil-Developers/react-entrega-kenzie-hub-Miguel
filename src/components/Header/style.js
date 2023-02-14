@@ -16,6 +16,8 @@ export const NavHome = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  padding: 0 10px;
 `;
 
 export const LinkBack = styled(linkRouter)`

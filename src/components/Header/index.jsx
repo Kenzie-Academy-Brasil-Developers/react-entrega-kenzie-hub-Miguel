@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 
 import Logo from "./../../assets/Logo.svg";
 import { HeaderHome, NavHome, LinkBack } from "./style";

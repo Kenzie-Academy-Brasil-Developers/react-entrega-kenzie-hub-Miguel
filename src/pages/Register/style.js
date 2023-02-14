@@ -3,7 +3,8 @@ import styled from "styled-components";
 export const FormRegister = styled.form`
   max-width: 370px;
   width: 95%;
-  height: 940px;
+  max-height: 1000px;
+  height: 100%;
   margin: 0 auto;
 
   background: #212529;
@@ -72,9 +73,7 @@ export const LabelRegister = styled.label`
   color: #f8f9fa;
 
   margin-left: 10px;
-
-  display: flex;
-  gap: 5px;
+  margin-bottom: 3px;
 `;
 
 export const InputsRegister = styled.input`
@@ -85,14 +84,14 @@ export const InputsRegister = styled.input`
   background: #343b41;
   border: 1.2182px solid #343b41;
   border-radius: 4px;
-  margin: 25px auto;
+  margin: 10px auto;
 `;
 
 export const SelectRegister = styled.select`
   max-width: 350.93px;
   width: 100%;
   height: 55px;
-  margin: 25px auto;
+  margin: 10px auto;
   padding: 0px 16px 0px 16px;
 
   background: #343b41;
@@ -104,5 +103,17 @@ export const SelectRegister = styled.select`
   font-weight: 400;
   font-size: 16.2426px;
   line-height: 26px;
+  color: #868e96;
+`;
+
+export const Perror = styled.p`
+  padding: 0px 0px 15px 10px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 22px;
+
   color: #868e96;
 `;

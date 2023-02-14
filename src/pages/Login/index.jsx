@@ -15,6 +15,8 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { api } from "../../Services";
+import { useContext } from "react";
+import { UserContext } from "../../providers/UserContext";
 
 const schema = yup.object({
   email: yup.string().required("é obrigatório!"),
@@ -22,28 +24,29 @@ const schema = yup.object({
 });
 
 export const Login = () => {
+  const { loginUser } = useContext(UserContext);
   const {
     register,
     handleSubmit,
-    reset,
     formState: { errors },
   } = useForm({
     resolver: yupResolver(schema),
   });
   const navigate = useNavigate();
 
-  const loginUser = async (data) => {
+  /* const loginUser = async (data) => {
     console.log(data);
 
     try {
       const response = await api.post("/sessions", data);
+
       console.log(response.data);
       navigate("/home");
     } catch (error) {
       console.error(error);
       reset();
     }
-  };
+  };*/
 
   return (
     <>

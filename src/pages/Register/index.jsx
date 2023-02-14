@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { ButtonRegisterInput, ButtonReturn } from "../../components/Button";
 import {
   DivInputs,
@@ -8,6 +8,7 @@ import {
   H1Title,
   InputsRegister,
   LabelRegister,
+  Perror,
   PInfoRegister,
   SelectRegister,
 } from "./style";
@@ -17,13 +18,14 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { useNavigate } from "react-router-dom";
 import { api } from "../../Services/";
+import { UserContext } from "../../providers/UserContext";
 
 const schema = yup.object({
-  name: yup.string().required("é obrigatório!"),
-  email: yup.string().required("é obrigatório!"),
-  bio: yup.string().required("é obrigatório!"),
-  contact: yup.string().required("é obrigatório!"),
-  course_module: yup.string().required("é obrigatório!"),
+  name: yup.string().required("Nome é obrigatório!"),
+  email: yup.string().required("Email é obrigatório!"),
+  bio: yup.string().required("Bio é obrigatório!"),
+  contact: yup.string().required("Contato é obrigatório!"),
+  course_module: yup.string().required("Modulo é obrigatório!"),
   password: yup
     .string()
     .matches(/(\d)/, "Deve conter ao menos 1 Número")
@@ -38,6 +40,7 @@ const schema = yup.object({
 });
 
 export const Register = () => {
+  const { registerUser } = useContext(UserContext);
   const {
     register,
     handleSubmit,
@@ -48,17 +51,18 @@ export const Register = () => {
   });
   const navigate = useNavigate();
 
-  const registerUser = async (data) => {
+  /*const registerUser = async (data) => {
     console.log(data);
 
     try {
-      await api.post("/users", data);
+      const response = await api.post("/users", data);
       navigate("/");
+      console.log(response.data);
     } catch (error) {
       console.error(error);
       reset();
     }
-  };
+  };*/
 
   return (
     <>
@@ -72,45 +76,38 @@ export const Register = () => {
           <PInfoRegister>Rapido e grátis, vamos nessa</PInfoRegister>
         </DivTitle>
         <DivInputs>
-          <LabelRegister htmlFor="name">
-            Nome
-            <p>{errors.name?.message}</p>
-          </LabelRegister>
+          <LabelRegister htmlFor="name">Nome</LabelRegister>
           <InputsRegister
             type="text"
             {...register("name")}
             id="name"
             placeholder="Digite aqui seu nome"
           />
+          <Perror>{errors.name?.message}</Perror>
         </DivInputs>
         <DivInputs>
-          <LabelRegister htmlFor="email">
-            Email
-            <p>{errors.email?.message}</p>
-          </LabelRegister>
+          <LabelRegister htmlFor="email">Email</LabelRegister>
           <InputsRegister
             type="text"
             {...register("email")}
             id="email"
             placeholder="Digite aqui seu email"
           />
+          <Perror>{errors.email?.message}</Perror>
         </DivInputs>
         <DivInputs>
-          <LabelRegister htmlFor="senha">
-            Senha
-            <p>{errors.password?.message}</p>
-          </LabelRegister>
+          <LabelRegister htmlFor="senha">Senha</LabelRegister>
           <InputsRegister
             type="password"
             {...register("password")}
             id="password"
             placeholder="Digite aqui sua senha"
           />
+          <Perror>{errors.password?.message}</Perror>
         </DivInputs>
         <DivInputs>
           <LabelRegister htmlFor="confirmarSenha">
             Confirmar senha
-            <p>{errors.passwordConfirmation?.message}</p>
           </LabelRegister>
           <InputsRegister
             type="password"
@@ -118,48 +115,45 @@ export const Register = () => {
             id="confirmarSenha"
             placeholder="Digite novamente sua senha"
           />
+          <Perror>{errors.passwordConfirmation?.message}</Perror>
         </DivInputs>
         <DivInputs>
-          <LabelRegister htmlFor="bio">
-            Bio
-            <p>{errors.bio?.message}</p>
-          </LabelRegister>
+          <LabelRegister htmlFor="bio">Bio</LabelRegister>
           <InputsRegister
             type="text"
             {...register("bio")}
             id="bio"
             placeholder="Fale sobre você"
           />
+          <Perror>{errors.bio?.message}</Perror>
         </DivInputs>
         <DivInputs>
-          <LabelRegister htmlFor="contato">
-            Contato
-            <p>{errors.contact?.message}</p>
-          </LabelRegister>
+          <LabelRegister htmlFor="contato">Contato</LabelRegister>
           <InputsRegister
             type="text"
             {...register("contact")}
             id="contact"
             placeholder="Opção de contato"
           />
+          <Perror>{errors.contact?.message}</Perror>
         </DivInputs>
         <DivInputs>
           <LabelRegister htmlFor="selecionarModulo">
             Selecionar modulo
-            <p>{errors.course_module?.message}</p>
           </LabelRegister>
           <SelectRegister
             name=""
             {...register("course_module")}
             id="course_module"
           >
-            <option value="m1">M1</option>
-            <option value="m2">M2</option>
-            <option value="m3">M3</option>
-            <option value="m4">M4</option>
-            <option value="m5">M5</option>
-            <option value="m6">M6</option>
+            <option value="m1">Módulo 1</option>
+            <option value="m2">Módulo 2</option>
+            <option value="m3">Módulo 3</option>
+            <option value="m4">Módulo 4</option>
+            <option value="m5">Módulo 5</option>
+            <option value="m6">Módulo 6</option>
           </SelectRegister>
+          <Perror>{errors.course_module?.message}</Perror>
         </DivInputs>
         <div>
           <ButtonRegisterInput />
