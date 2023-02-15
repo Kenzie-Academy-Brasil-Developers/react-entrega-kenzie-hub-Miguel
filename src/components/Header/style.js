@@ -37,3 +37,21 @@ export const LinkBack = styled(linkRouter)`
   justify-content: center;
   text-align: center;
 `;
+
+export const ButtonRemove = styled.button`
+  width: 55.49px;
+  height: 32px;
+
+  background: #212529;
+  border-radius: 4px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 28px;
+  color: #f8f9fa;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+`;
