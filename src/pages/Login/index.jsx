@@ -1,5 +1,4 @@
 import { ButtonLogin, ButtonRegister } from "../../components/Button";
-import { useNavigate } from "react-router-dom";
 import {
   DivInfo,
   DivTitle,
@@ -8,13 +7,13 @@ import {
   ImgTeste,
   InputForm,
   Label,
+  PerrorLogin,
   Pinfo,
 } from "./style";
 import Logo from "./../../assets/Logo.svg";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
-import { api } from "../../Services";
 import { useContext } from "react";
 import { UserContext } from "../../providers/UserContext";
 
@@ -32,21 +31,6 @@ export const Login = () => {
   } = useForm({
     resolver: yupResolver(schema),
   });
-  const navigate = useNavigate();
-
-  /* const loginUser = async (data) => {
-    console.log(data);
-
-    try {
-      const response = await api.post("/sessions", data);
-
-      console.log(response.data);
-      navigate("/home");
-    } catch (error) {
-      console.error(error);
-      reset();
-    }
-  };*/
 
   return (
     <>
@@ -56,26 +40,22 @@ export const Login = () => {
           <H2Login>Login</H2Login>
         </DivTitle>
         <DivInfo>
-          <Label htmlFor="email">
-            Email
-            <p>{errors.email?.message}</p>
-          </Label>
+          <Label htmlFor="email">Email</Label>
           <InputForm
             {...register("email", { required: true })}
             type="text"
             id="email"
             placeholder="Digite aqui seu email"
           />
-          <Label htmlFor="password">
-            Senha
-            <p>{errors.password?.message}</p>
-          </Label>
+          <PerrorLogin>{errors.email?.message}</PerrorLogin>
+          <Label htmlFor="password">Senha</Label>
           <InputForm
             {...register("password", { required: true })}
             type="password"
             id="password"
             placeholder="Digite aqui sua senha"
           />
+          <PerrorLogin>{errors.password?.message}</PerrorLogin>
           <ButtonLogin />
           <Pinfo>Ainda não possui uma conta?</Pinfo>
           <ButtonRegister />

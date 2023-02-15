@@ -13,15 +13,3 @@ export const AppRoutes = () => {
     </Routes>
   );
 };
-
-/*    <Routes>
-      <Routes>
-        <Route path="/" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/home" element={<Home />} />
-      </Routes>
-
-      <Route path="/" element={<ProtectedRoutes />}>
-        <Route path="/home" element={<Home />} />
-      </Route>
-    </Routes>*/

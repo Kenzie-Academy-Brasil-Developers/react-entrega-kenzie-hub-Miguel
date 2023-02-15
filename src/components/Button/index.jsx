@@ -7,7 +7,6 @@ import {
   Link,
   LinkReturn,
 } from "./style";
-//import { Link } from "react-router-dom";
 
 export const ButtonLogin = () => {
   return <ButtonEntrar type="submit">Entrar</ButtonEntrar>;

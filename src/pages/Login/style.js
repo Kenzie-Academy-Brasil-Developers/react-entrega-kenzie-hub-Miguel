@@ -4,6 +4,7 @@ export const Form = styled.form`
   max-width: 369px;
   width: 95%;
   height: 502px;
+  height: 100%;
 
   background: #212529;
   box-shadow: 0px 4px 40px -10px rgba(0, 0, 0, 0.25);
@@ -56,8 +57,7 @@ export const InputForm = styled.input`
   background: #343b41;
   border: 1.2182px solid #f8f9fa;
   border-radius: 4px;
-
-  margin-bottom: 25px;
+  margin-bottom: 5px;
 `;
 
 export const Pinfo = styled.p`
@@ -77,4 +77,16 @@ export const ImgTeste = styled.img`
   display: flex;
   align-items: center;
   justify-content: center;
+`;
+
+export const PerrorLogin = styled.p`
+  padding: 0px 0px 15px 3px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 22px;
+
+  color: #868e96;
 `;

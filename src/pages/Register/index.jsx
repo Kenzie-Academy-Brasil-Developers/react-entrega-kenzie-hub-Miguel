@@ -16,8 +16,6 @@ import Logo from "./../../assets/Logo.svg";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
-import { useNavigate } from "react-router-dom";
-import { api } from "../../Services/";
 import { UserContext } from "../../providers/UserContext";
 
 const schema = yup.object({
@@ -49,20 +47,6 @@ export const Register = () => {
   } = useForm({
     resolver: yupResolver(schema),
   });
-  const navigate = useNavigate();
-
-  /*const registerUser = async (data) => {
-    console.log(data);
-
-    try {
-      const response = await api.post("/users", data);
-      navigate("/");
-      console.log(response.data);
-    } catch (error) {
-      console.error(error);
-      reset();
-    }
-  };*/
 
   return (
     <>

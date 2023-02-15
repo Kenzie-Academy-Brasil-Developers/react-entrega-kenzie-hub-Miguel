@@ -10,7 +10,6 @@ export const Header = () => {
       <NavHome>
         <img src={Logo} />
         <ButtonRemove onClick={userLogout}>Sair</ButtonRemove>
-        {/*<LinkBack to={"/"}>Sair</LinkBack>*/}
       </NavHome>
     </HeaderHome>
   );
