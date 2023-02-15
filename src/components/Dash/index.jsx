@@ -7,8 +7,8 @@ export const Dash = () => {
 
   return (
     <DivDash>
-      <H1Dash>{user.name}</H1Dash>
-      <PDash>{user.course_module}</PDash>
+      <H1Dash>{user?.name}</H1Dash>
+      <PDash>{user?.course_module}</PDash>
     </DivDash>
   );
 };
