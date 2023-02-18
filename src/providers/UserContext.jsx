@@ -31,6 +31,7 @@ export const UserProvider = ({ children }) => {
       localStorage.setItem("@USERID", response.data.user.id);
       navigate("/home");
       toast.success("Login feito com sucesso!");
+      console.log(response.data);
     } catch (error) {
       console.error(error);
     }
