@@ -130,12 +130,24 @@ export const Register = () => {
             {...register("course_module")}
             id="course_module"
           >
-            <option value="m1">Módulo 1</option>
-            <option value="m2">Módulo 2</option>
-            <option value="m3">Módulo 3</option>
-            <option value="m4">Módulo 4</option>
-            <option value="m5">Módulo 5</option>
-            <option value="m6">Módulo 6</option>
+            <option value="Primeiro módulo (Introdução ao Frontend)">
+              Primeiro módulo (Introdução ao Frontend)
+            </option>
+            <option value="Segundo módulo (Frontend)">
+              Segundo módulo (Frontend)
+            </option>
+            <option value="Terceiro módulo (Frontend avançado)">
+              Terceiro módulo (Frontend avançado)
+            </option>
+            <option value="Quarto módulo (Introdução ao Backend)">
+              Quarto módulo (Introdução ao Backend)
+            </option>
+            <option value="Quinto módulo (Backend)">
+              Quinto módulo (Backend)
+            </option>
+            <option value="Sexto módulo (Backend Avançado)">
+              Sexto módulo (Backend Avançado)
+            </option>
           </SelectRegister>
           <Perror>{errors.course_module?.message}</Perror>
         </DivInputs>

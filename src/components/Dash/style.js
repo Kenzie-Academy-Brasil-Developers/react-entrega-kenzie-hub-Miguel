@@ -10,9 +10,6 @@ export const DivDash = styled.div`
   align-items: center;
 
   padding: 0 10px;
-
-  border-top: solid 4px #212529;
-  border-bottom: solid 4px #212529;
 `;
 
 export const H1Dash = styled.h1`
@@ -33,4 +30,11 @@ export const PDash = styled.p`
   line-height: 22px;
 
   color: #868e96;
+`;
+
+export const DivTest = styled.div`
+  width: 100vw;
+
+  border-top: solid 4px #212529;
+  border-bottom: solid 4px #212529;
 `;

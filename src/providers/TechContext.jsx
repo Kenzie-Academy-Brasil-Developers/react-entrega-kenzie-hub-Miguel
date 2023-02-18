@@ -48,6 +48,8 @@ export const TechProvider = ({ children }) => {
         },
       });
       console.log(response);
+      const newDeleteList = listTech.filter((list) => list.id !== idTech);
+      setListTech(newDeleteList);
     } catch (error) {
       console.log(error);
     }

@@ -14,7 +14,7 @@ import {
   UlContainer,
 } from "./style";
 
-export const Home = () => {
+export const Home = ({ tech }) => {
   const {
     listTech,
     setAddModal,
@@ -59,7 +59,7 @@ export const Home = () => {
         )}
       </DivUl>
       <AddModalTech />
-      {EditModal && <EditModalTech />}
+      {EditModal && <EditModalTech tech={tech} />}
     </div>
   );
 };

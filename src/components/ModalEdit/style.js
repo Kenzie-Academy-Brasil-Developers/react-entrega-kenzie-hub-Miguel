@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const DivModal = styled.div`
+export const DivModalEdit = styled.div`
   width: 369px;
   height: 372px;
 
@@ -13,6 +13,7 @@ export const DivModal = styled.div`
   background: #212529;
 
   border-radius: 4px;
+
   p {
     font-family: "Inter";
     font-style: normal;
@@ -65,38 +66,20 @@ export const DivModal = styled.div`
     padding: 20px;
   }
 `;
-
-export const DivTitleModal = styled.div`
-  height: 50px;
-  padding: 0px 15px 0px 15px;
-
+export const DivButtons = styled.div`
   display: flex;
   justify-content: space-between;
-  align-items: center;
 
-  background: #343b41;
-  border-radius: 4px 4px 0px 0px;
-`;
-
-export const ButtonCloseModal = styled.button`
-  font-family: "Nunito";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 26px;
-  color: #868e96;
-  background: transparent;
-  border: none;
-`;
-
-export const ButtonAddTechs = styled.button`
-  height: 48px;
-  padding: 0px 22.3336px;
   margin-top: 20px;
+`;
 
-  background: #ff577f;
-  border: 1.2182px solid #ff577f;
-  border-radius: 4.06066px;
+export const ButtonAttTech = styled.button`
+  padding: 0px 22.3336px;
+  height: 48px;
+
+  background: #59323f;
+  border: 1.2182px solid #59323f;
+  border-radius: 4px;
 
   font-family: "Inter";
   font-style: normal;
@@ -106,13 +89,18 @@ export const ButtonAddTechs = styled.button`
   color: #ffffff;
 `;
 
-export const DivModalopacity = styled.div`
-  width: 100%;
-  min-height: 100vh;
-  background-color: rgba(0, 0, 0, 0.65);
-  position: fixed;
-  inset: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+export const ButtonDelete = styled.button`
+  padding: 0px 22.3336px;
+  height: 48px;
+
+  background: #868e96;
+  border: 1.2182px solid #868e96;
+  border-radius: 4px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 26px;
+  color: #ffffff;
 `;
