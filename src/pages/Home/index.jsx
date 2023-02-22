@@ -1,4 +1,5 @@
 import React, { useContext, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { Dash } from "../../components/Dash";
 import { Header } from "../../components/Header";
 import { AddModalTech } from "../../components/Modal";
@@ -15,7 +16,7 @@ import {
   UlContainer,
 } from "./style";
 
-export const Home = ({ tech }) => {
+export const Home = () => {
   const {
     listTech,
     setAddModal,
@@ -39,10 +40,16 @@ export const Home = ({ tech }) => {
           <UlContainer>
             {listTech.map((tech) => {
               return (
-                <LiCard key={tech.id}>
+                <LiCard
+                  key={tech.id}
+                  onClick={() => {
+                    setEditModal(true);
+                    setattTecnologia(tech);
+                  }}
+                >
                   <Ptest>{tech.title}</Ptest>
                   <Ptest>{tech.status}</Ptest>
-                  <button
+                  {/*<button
                     type="submit"
                     onClick={() => {
                       setEditModal(true);
@@ -50,7 +57,7 @@ export const Home = ({ tech }) => {
                     }}
                   >
                     Editar
-                  </button>
+                  </button>*/}
                 </LiCard>
               );
             })}
@@ -60,7 +67,7 @@ export const Home = ({ tech }) => {
         )}
       </DivUl>
       <AddModalTech />
-      {EditModal && <EditModalTech tech={tech} />}
+      {EditModal && <EditModalTech />}
     </div>
   );
 };
