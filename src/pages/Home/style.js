@@ -35,6 +35,18 @@ export const Ptest = styled.p`
 
   margin-left: 25px;
   margin-right: 25px;
+
+  align-items: center;
+  display: flex;
+  justify-content: center;
+`;
+
+export const PMsgtech = styled.p`
+  align-items: center;
+  display: flex;
+  justify-content: center;
+
+  color: #ffffff;
 `;
 
 export const DivUl = styled.div`

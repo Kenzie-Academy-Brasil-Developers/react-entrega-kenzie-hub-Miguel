@@ -15,7 +15,6 @@ export const TechProvider = ({ children }) => {
       const idUser = localStorage.getItem("@USERID");
       const response = await api.get(`/users/${idUser}`);
       setListTech(response.data.techs);
-      console.log(response.data.techs);
     } catch (error) {
       console.log(error);
     }

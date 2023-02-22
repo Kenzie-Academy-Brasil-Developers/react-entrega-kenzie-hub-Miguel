@@ -61,7 +61,12 @@ export const EditModalTech = ({ tech }) => {
                 <ButtonAttTech type="submit">
                   Atualizar Tecnologia
                 </ButtonAttTech>
-                <ButtonDelete type="button" onClick={() => deleteTech(tech.id)}>
+                <ButtonDelete
+                  type="button"
+                  onClick={() =>
+                    deleteTech(attTecnologia.id) && setEditModal(false)
+                  }
+                >
                   Deletar
                 </ButtonDelete>
               </DivButtons>

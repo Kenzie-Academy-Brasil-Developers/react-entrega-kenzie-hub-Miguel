@@ -9,6 +9,7 @@ import {
   DivTech,
   DivUl,
   LiCard,
+  PMsgtech,
   Ptech,
   Ptest,
   UlContainer,
@@ -55,7 +56,7 @@ export const Home = ({ tech }) => {
             })}
           </UlContainer>
         ) : (
-          <Ptest>Nenhuma tech cadastrada!</Ptest>
+          <PMsgtech>Nenhuma tech cadastrada!</PMsgtech>
         )}
       </DivUl>
       <AddModalTech />
