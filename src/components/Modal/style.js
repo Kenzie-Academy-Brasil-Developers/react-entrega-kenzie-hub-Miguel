@@ -93,7 +93,7 @@ export const ButtonCloseModal = styled.button`
 export const ButtonAddTechs = styled.button`
   height: 48px;
   padding: 0px 22.3336px;
-  margin-top: 20px;
+  margin-top: 40px;
 
   background: #ff577f;
   border: 1.2182px solid #ff577f;

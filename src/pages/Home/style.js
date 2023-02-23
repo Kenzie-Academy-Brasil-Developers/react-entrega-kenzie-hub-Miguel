@@ -30,6 +30,7 @@ export const ButtonAddTech = styled.button`
   height: 32px;
 
   color: #ffffff;
+  font-weight: 700;
 `;
 
 export const Pinfos = styled.p`

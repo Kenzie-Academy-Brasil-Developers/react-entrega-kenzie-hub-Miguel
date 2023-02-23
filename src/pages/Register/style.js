@@ -3,8 +3,8 @@ import styled from "styled-components";
 export const FormRegister = styled.form`
   max-width: 370px;
   width: 95%;
-  max-height: 1000px;
-  height: 100%;
+  height: 865px;
+  //height: 100%;
   margin: 0 auto;
 
   background: #212529;

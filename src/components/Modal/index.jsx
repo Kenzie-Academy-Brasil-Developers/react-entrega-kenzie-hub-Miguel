@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { useForm } from "react-hook-form";
 import { Outlet } from "react-router-dom";
+import { Label } from "../../pages/Login/style";
 import { TechContext } from "../../providers/TechContext";
 import {
   ButtonAddTechs,
@@ -33,14 +34,14 @@ export const AddModalTech = () => {
               </ButtonCloseModal>
             </DivTitleModal>
             <form onSubmit={handleSubmit(submit)}>
-              <label htmlFor="name">Nome</label>
+              <Label htmlFor="name">Nome</Label>
               <input
                 id="name"
                 type="text"
                 {...register("title")}
                 placeholder="Digite sua tecnologia"
               />
-              <label htmlFor="status">Selecionar status</label>
+              <Label htmlFor="status">Selecionar status</Label>
               <select name="" id="status" {...register("status")}>
                 <option value="Iniciante">Iniciante</option>
                 <option value="Intermediário">Intermediário</option>
