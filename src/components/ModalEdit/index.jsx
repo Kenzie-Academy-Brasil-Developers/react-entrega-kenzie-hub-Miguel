@@ -20,7 +20,7 @@ export const EditModalTech = ({ tech }) => {
     setattTecnologia,
   } = useContext(TechContext);
 
-  const { register, handleSubmit } = useForm({
+  const { register, handleSubmit, reset } = useForm({
     defaultValues: {
       title: attTecnologia.title,
       status: attTecnologia.status,
@@ -53,9 +53,9 @@ export const EditModalTech = ({ tech }) => {
               />
               <label htmlFor="status">Selecionar status</label>
               <select name="" id="status" {...register("status")}>
-                <option value="iniciante">Iniciante</option>
-                <option value="intermediario">Intermediário</option>
-                <option value="avançado">Avançado</option>
+                <option value="Iniciante">Iniciante</option>
+                <option value="Intermediário">Intermediário</option>
+                <option value="Avançado">Avançado</option>
               </select>
               <DivButtons>
                 <ButtonAttTech type="submit">

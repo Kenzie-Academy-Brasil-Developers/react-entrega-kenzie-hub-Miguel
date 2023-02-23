@@ -1,13 +1,14 @@
 import styled from "styled-components";
 
 export const DivModal = styled.div`
-  width: 369px;
+  max-width: 369px;
+  width: 95%;
   height: 372px;
 
   display: flex;
   flex-direction: column;
 
-  position: fixed;
+  //position: fixed;
   left: 40%;
 
   background: #212529;

@@ -1,13 +1,14 @@
 import styled from "styled-components";
 
 export const DivModalEdit = styled.div`
-  width: 369px;
+  max-width: 369px;
+  width: 95%;
   height: 372px;
 
   display: flex;
   flex-direction: column;
 
-  position: fixed;
+  //position: fixed;
   left: 40%;
 
   background: #212529;
@@ -71,11 +72,12 @@ export const DivButtons = styled.div`
   justify-content: space-between;
 
   margin-top: 20px;
+  gap: 5px;
 `;
 
 export const ButtonAttTech = styled.button`
   padding: 0px 22.3336px;
-  height: 48px;
+  height: 52px;
 
   background: #59323f;
   border: 1.2182px solid #59323f;
@@ -91,7 +93,7 @@ export const ButtonAttTech = styled.button`
 
 export const ButtonDelete = styled.button`
   padding: 0px 22.3336px;
-  height: 48px;
+  height: 52px;
 
   background: #868e96;
   border: 1.2182px solid #868e96;

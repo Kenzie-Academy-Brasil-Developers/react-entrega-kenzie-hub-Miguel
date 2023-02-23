@@ -7,7 +7,9 @@ export const DivTech = styled.div`
 
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-top: 20px;
+  padding: 10px 10px;
 `;
 
 export const Ptech = styled.p`
@@ -30,7 +32,7 @@ export const ButtonAddTech = styled.button`
   color: #ffffff;
 `;
 
-export const Ptest = styled.p`
+export const Pinfos = styled.p`
   color: #ffffff;
 
   margin-left: 25px;
@@ -39,6 +41,13 @@ export const Ptest = styled.p`
   align-items: center;
   display: flex;
   justify-content: center;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14.21px;
+  line-height: 22px;
+  color: #ffffff;
 `;
 
 export const PMsgtech = styled.p`
@@ -46,12 +55,14 @@ export const PMsgtech = styled.p`
   display: flex;
   justify-content: center;
 
+  height: 100px;
+
   color: #ffffff;
 `;
 
 export const DivUl = styled.div`
   max-width: 780px;
-  width: 100%;
+  width: 95%;
   max-height: 416px;
 
   background: #212529;
@@ -69,7 +80,7 @@ export const UlContainer = styled.ul`
 
 export const LiCard = styled.li`
   max-width: 732px;
-  width: 100%;
+  width: 95%;
   height: 49px;
 
   margin: 0 auto;
@@ -77,6 +88,7 @@ export const LiCard = styled.li`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  cursor: pointer;
 
   background: #121214;
   border-radius: 4px;

@@ -15,7 +15,6 @@ export const UserProvider = ({ children }) => {
     try {
       const response = await api.post("/users", data);
       navigate("/");
-      console.log(response.data);
       toast.success("Conta criada com sucesso!");
     } catch (error) {
       console.error(error);
@@ -31,9 +30,9 @@ export const UserProvider = ({ children }) => {
       localStorage.setItem("@USERID", response.data.user.id);
       navigate("/home");
       toast.success("Login feito com sucesso!");
-      console.log(response.data);
     } catch (error) {
       console.error(error);
+      toast.error("Email ou senha incorreto!");
     }
   };
 
@@ -52,13 +51,33 @@ export const UserProvider = ({ children }) => {
           },
         });
         setUser(response.data);
-        console.log(response.data);
       } catch (error) {
         console.log(error);
       }
     }
 
     getUser();
+  }, []);
+
+  useEffect(() => {
+    const UserToken = localStorage.getItem("@TOKEN");
+
+    if (UserToken) {
+      const autoLogin = async () => {
+        try {
+          const response = await api.get("/profile", {
+            headers: {
+              Authorization: `Bearer ${UserToken}`,
+            },
+          });
+          setUser(response.data);
+          navigate("/home");
+        } catch (error) {
+          console.log(error);
+        }
+      };
+      autoLogin();
+    }
   }, []);
 
   const userLogout = () => {

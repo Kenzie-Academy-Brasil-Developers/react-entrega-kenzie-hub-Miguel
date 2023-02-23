@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { createContext } from "react";
+import { toast } from "react-toastify";
 import { api } from "../Services";
 
 export const TechContext = createContext({});
@@ -32,7 +33,7 @@ export const TechProvider = ({ children }) => {
         },
       });
       userTech();
-      console.log(response);
+      toast.success("Tecnologia criada com sucesso!");
     } catch (error) {
       console.log(error);
     }
@@ -46,9 +47,10 @@ export const TechProvider = ({ children }) => {
           Authorization: `Bearer ${UserToken}`,
         },
       });
-      console.log(response);
+
       const newDeleteList = listTech.filter((list) => list.id !== idTech);
       setListTech(newDeleteList);
+      toast.warning("Tecnologia exluida!");
     } catch (error) {
       console.log(error);
     }
@@ -62,7 +64,6 @@ export const TechProvider = ({ children }) => {
           Authorization: `Bearer ${UserToken}`,
         },
       });
-      console.log(response);
       const newListTech = listTech.map((list) => {
         if (idTech === list.id) {
           return { ...list, ...data };
@@ -71,7 +72,7 @@ export const TechProvider = ({ children }) => {
         }
       });
       setListTech(newListTech);
-      console.log(newListTech);
+      toast.success("Tecnologia atualizada!");
     } catch (error) {
       console.log(error);
     }

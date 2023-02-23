@@ -14,8 +14,9 @@ import Logo from "./../../assets/Logo.svg";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { UserContext } from "../../providers/UserContext";
+import { useNavigate } from "react-router-dom";
 
 const schema = yup.object({
   email: yup.string().required("é obrigatório!"),
@@ -23,7 +24,7 @@ const schema = yup.object({
 });
 
 export const Login = () => {
-  const { loginUser } = useContext(UserContext);
+  const { loginUser, user } = useContext(UserContext);
   const {
     register,
     handleSubmit,

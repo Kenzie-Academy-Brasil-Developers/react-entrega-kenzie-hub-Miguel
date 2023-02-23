@@ -10,9 +10,9 @@ import {
   DivTech,
   DivUl,
   LiCard,
+  Pinfos,
   PMsgtech,
   Ptech,
-  Ptest,
   UlContainer,
 } from "./style";
 
@@ -47,17 +47,8 @@ export const Home = () => {
                     setattTecnologia(tech);
                   }}
                 >
-                  <Ptest>{tech.title}</Ptest>
-                  <Ptest>{tech.status}</Ptest>
-                  {/*<button
-                    type="submit"
-                    onClick={() => {
-                      setEditModal(true);
-                      setattTecnologia(tech);
-                    }}
-                  >
-                    Editar
-                  </button>*/}
+                  <Pinfos>{tech.title}</Pinfos>
+                  <Pinfos>{tech.status}</Pinfos>
                 </LiCard>
               );
             })}
