@@ -59,6 +59,12 @@ export const PMsgtech = styled.p`
   height: 100px;
 
   color: #ffffff;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 18px;
 `;
 
 export const DivUl = styled.div`
